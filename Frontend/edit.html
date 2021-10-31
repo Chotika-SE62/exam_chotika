@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grad Restaurant Application</title>
+   <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<link rel="stylesheet" href="index.css">
+</head>
+<body onload="init()">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <h1 >Grab Restaurant</h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item-frist">
+                        <a href="index.html" class="btn btn-warning" id="btn-search" role="button">
+                            <img src="./img/search.png" class="search-icon">
+                        </a>
+                    </li>
+                    <li class="nav-item-secon">
+                        <a href="add.html" class="btn btn-info" id="btn-add" role="button">
+                            <img src="./img/add.png" class="search-icon" style="height: 20px; width: 20px;">
+                        </a>
+                    </li>
+                </ul>
+
+                <a href="all_user.html" type="button" class="btn btn-success" id="btn-user">
+                    <img src="./img/user2.png" class="search-icon" style="height: 20px; width: auto;">จัดการผู้ใช้
+                </a>
+            
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="text-align:center;">
+        <h1 style="margin-top: 50px; margin-bottom: 30px;">Edit Restaurant</h1>
+        <div class="row form">
+            <div class="col-6 card justify-content-center">
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="id">Restaurant ID</label>
+                            <input type="number" class="form-control" id="id"  placeholder="Enter Restaurant ID">
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Restaurant Name</label>
+                            <input type="text" class="form-control" id="name"  placeholder="Enter Restaurant Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="type">Restaurant Type</label>
+                            <input type="text" class="form-control" id="type"  placeholder="Enter Restaurant Type">
+                        </div>
+                        <div class="form-group">
+                            <label for="imageurl">Restaurant Image Url</label>
+                            <input type="text" class="form-control" id="imageurl"  placeholder="Enter Restaurant Imageurl">
+                        </div>
+                        <button class="btn btn-success" type="button" onclick="edit()">Update</button>
+                        <a href="all.html" class="btn btn-danger">Cancel</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-light text-center text-lg-start" style="margin-top: 40px;">
+        <div class="text-center p-3" style="background-color: rgba(255, 255, 255, 0.2);"> © Grab Restaurant Application:
+            <a class="text-dark" href="http://pgm.npru.ac.th/se/">http://pgm.npru.ac.th/se/</a>
+        </div>
+    </footer>
+
+    <script src="edit.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" 
+    crossorigin="anonymous"
+    />
+    <link href="index.css" rel="stylesheet" />  <!-- ลิงค์ไปยังไฟล์ index.css -->
+    <title>Grab Restaurant Application</title>
+</head>
+<body onload="init()">  <!-- ดึงdataมาโชว์ -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <h1 >Grab Restaurant</h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item-frist">
+                        <a href="index_user.html" class="btn btn-warning" id="btn-search" role="button">
+                            <img src="./img/search.png" class="search-icon">
+                        </a>
+                    </li>
+                    <li class="nav-item-secon">
+                        <a href="add_user.html" class="btn btn-info" id="btn-add" role="button">
+                            <img src="./img/add.png" class="search-icon" style="height: 20px; width: 20px;">
+                        </a>
+                    </li>
+                </ul>
+
+                <a href="all.html" type="button" class="btn btn-success" id="btn-user">
+                    <img src="./img/spoon1.png" class="search-icon" style="height: 20px; width: auto;">&nbsp; จัดการร้านอาหาร
+                </a>
+            
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 id="text-user" style="text-align:center; margin-top: 50px;">User</h1>
+        <br />
+            <!-- <div class="restaurants"></div>    ส่วนแสดงผล -->
+            <center>
+            <table class="table table-striped table-hover" id="table-content" style="text-align:center; width: 1000px;">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">UserName</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Tel</th>
+                        <th scope="col" style="width: 300px;"></th>
+                    </tr>
+                </thead>
+                <tbody class="users"></tbody>
+            </table>
+            </center>
+        
+    </div>
+
+    <footer class="bg-light text-center text-lg-start" style="margin-top: 40px;">
+        <div class="text-center p-3" style="background-color: rgba(255, 255, 255, 0.2);"> © Grab Restaurant Application:
+            <a class="text-dark" href="http://pgm.npru.ac.th/se/">http://pgm.npru.ac.th/se/</a>
+        </div>
+    </footer>
+
+    <script src="all_user.js"></script>    <!-- ลิงค์ไปยังไฟล์ add.js -->
+</body>
+</html>
